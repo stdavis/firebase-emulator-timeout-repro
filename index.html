@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      async function sendRequest() {
+        const url = 'http://localhost:5001/<your-project-id>/<your-region>/maps'
+        const response = await fetch(url);
+        const body = await response.text();
+        document.getElementById('responseDiv').innerHTML = body;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="sendRequest()">Send Request</button>
+    <span id="responseDiv"></span>
+  </body>
+</html>

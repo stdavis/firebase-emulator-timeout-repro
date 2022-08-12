@@ -1,0 +1,19 @@
+{
+  "name": "firebase-emulator-timeout-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently serve \"npm run start:firebase-emulators\"",
+    "start:firebase-emulators": "firebase emulators:start --import emulator_data --export-on-exit --only functions"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "firebase-tools": "^11.6.0"
+  },
+  "dependencies": {
+    "concurrently": "^7.3.0",
+    "serve": "^14.0.1"
+  }
+}
